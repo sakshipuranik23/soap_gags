@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjord+One&family=Fraunces:opsz@9..144&display=swap');
+
+#banner{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    background: url(img/banner2.jpg) center/cover no-repeat;                    
+    background-attachment: fixed;
+    overflow: hidden;
+}
+#slogan{
+    width: 33%;
+    padding-top: 3%;
+    padding-left: 3%;
+    font-size: 4.5vw;
+    font-family: 'Fraunces', serif;
+    font-weight: 550;
+    color: black;
+}
+.navlinks a{
+    color: black;
+    font-family: 'Fraunces', serif;
+    width: 30%;
+    font-size: 1.4vw;
+    padding: 2vw;
+}
+.navlinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    list-style: none;
+    position: absolute;
+    left: 2%;
+    top: 30%;
+}
+
+.navbar{
+    width: 100%;
+    height: 9%;
+    padding: 1%;
+    color: black;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.logo{
+    position: absolute;
+    left: 49%;
+    top: 1%;
+    font-size:2.3vw;
+    font-family: 'Fjord', serif;
+}
+
+
+
+ .mobile-nav-toggle{
+    display: none;
+} 
+
+@media screen and (max-width: 767px){
+    .navlinks{
+        display: none;
+        height: 100vh;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column;
+        inset: 0 0 0 30%;
+        background-color: hsl(0 0% 100% / 0.2);
+        backdrop-filter: blur(1rem);
+    }
+    .navlinks a{
+        font-size: 3vh;
+        padding: 50px;
+       
+    }
+    .navlinks li{
+        padding-bottom: 40px;
+    }
+    .navlinks.show{
+        display: flex;
+    }
+    .mobile-nav-toggle{
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        border: 0;
+        /* aspect-ratio: 1; */
+        top: 1.5rem;
+        right: 2rem;
+    }
+    
+    /* .hamburger{
+        position: fixed;
+        display: block;
+    
+    } */
+    .logo{
+        font-size: 6vw;
+    }
+    #slogan{
+        padding-top: 20%;
+        font-size: 7vw;
+    }
+
+
+        
+}
+
+/*hover effect*/
+.navlinks li {
+    box-shadow: inset 0 0 0 10 #AF8D67;
+    color: #54b3d6;
+
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+  .navlinks li:hover {
+    box-shadow: inset 8vw 0 0 0 #AF8D67;
+    color: white;
+  }

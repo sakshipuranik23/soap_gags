@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjord+One&family=Fraunces:opsz@9..144&display=swap');
+/* features section start */
+#features{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #D9D9D9;
+}
+
+#mid-circle1{
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  position: absolute;
+  top: -5%;
+  left: 50%;
+}
+ 
+#sub1{
+    padding-top: 1vw;
+    padding-left: 7vw;
+    color: black;
+    font-size: 4vw;
+    font-family: 'Fraunces', serif;
+    font-weight: 5700;
+}
+#sub2{
+    padding-left: 50vw;
+    padding-top: 0vw;
+    padding-bottom: 1vw;
+    color: black;
+    font-size: 4vw;
+    font-family: 'Fraunces', serif;
+    font-weight: 550;
+}
+/* feature cards */
+.cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 6.5rem;
+    background-attachment: fixed;
+  }
+  
+  /* Screen larger than 600px? 2 column */
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  /* Screen larger than 900px? 3 columns */
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
+  .card1 {
+    position: relative;
+    background-color: white;
+    background-image: url(img/features-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5%;
+    border: 0.25vw solid black ;
+    color: white;
+    padding: 1.5vw;
+    height: 30vw;
+  }
+  .card2 {
+    position: relative;
+    background-color: white;
+    background-image: url(img/features-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0.25vw solid black ;
+    border-radius: 5%;
+    color: white;
+    padding: 1.5vw;
+    height: 30vw;
+  }
+  .card3 {
+    position: relative;
+    background-color: white;
+    background-image: url(img/features-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5%;
+    border: 0.25vw solid black ;
+    color: white;
+    padding: 1.5vw;
+    height: 30vw;
+  }
+  .overlay{
+  position: absolute; 
+  bottom: 1%; 
+  left: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  font-family: 'Fraunces', serif; 
+  width: 95%;
+  margin-left: 0.5rem;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  }
+  .card1:hover .overlay {
+    opacity: 1;
+  }
+  .card2:hover .overlay {
+    opacity: 1;
+  }
+  .card3:hover .overlay {
+    opacity: 1;
+  }
+
+  .allProducts{
+    position: absolute;
+    font-family: 'Fraunces', serif;
+    font-size: 2vw;
+    right: 1vw;
+    bottom: 1vw;
+    padding: 1vw;
+  }
+
+  @media screen and (max-width: 767px){
+    #mid-circle1{
+      height: 50px;
+      width: 50px;
+      top: -3%;
+      left: 45%;
+    }
+    #sub1{
+      font-size: 7vw;
+      padding-left: 4vw;
+      padding-top: 15vw;
+    }
+    #sub2{
+      font-size: 7vw;
+      padding-left: 15vw;
+      padding-bottom: 15vw;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        grid-gap:2vw;
+    }
+      
+    .card1 {
+        flex: 0 0 auto;
+        height: 110vw;
+        width: 70%;
+        margin-left: 13vw;
+        }
+    .card2 {
+        flex: 0 0 auto;
+        height: 110vw;
+        width: 70%;
+        margin-left: 15vw;
+          }   
+    .card3 {
+        flex: 0 0 auto;
+        height: 110vw;
+        width: 70%;
+        margin-left: 15vw;
+        margin-right: 13vw;
+
+          } 
+
+          .allProducts{
+            right: 32vw;
+            bottom: 20vw;
+            font-size: 5vw;
+          }
+    
+  }
+
+  /*hover effect*/
+  .allProducts {
+  box-shadow: inset 0 0 0 10 #908a8a;
+ 
+
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.allProducts:hover {
+  box-shadow: inset 8vw 0 0 0 #908a8a;
+  /* color: white; */
+}
